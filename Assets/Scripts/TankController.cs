@@ -18,12 +18,12 @@ public class TankController : MonoBehaviour
     [Range(5f, 50f)]
     public float velocity = 20f;
 
-    private string movementAxisName;          // The name of the input axis for moving forward and back.
-    private string turnAxisName;              // The name of the input axis for turning.
-    private Rigidbody rb;                     // Reference used to move the tank.
-    private float movementInputValue;         // The current value of the movement input.
-    private float turnInputValue;             // The current value of the turn input.
-    private float originalPitch;              // The pitch of the audio source at the start of the scene.
+    private string movementAxisName;          
+    private string turnAxisName;             
+    private Rigidbody rb;                    
+    private float movementInputValue;        
+    private float turnInputValue;             
+    private float originalPitch;              
 
 
     // Shooting Stuff
@@ -51,9 +51,9 @@ public class TankController : MonoBehaviour
 
     [SerializeField]
     [Range(0f, 100f)]
-    private float m_CurrentHealth;                      // How much health the tank currently has.
+    private float m_CurrentHealth;                      
     [SerializeField]
-    private bool m_Dead;                                // Has the tank been reduced beyond zero health yet?
+    private bool m_Dead;                                
 
     // Audio Stuff
     [Space(10)]
