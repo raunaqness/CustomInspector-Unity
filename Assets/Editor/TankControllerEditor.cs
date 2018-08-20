@@ -63,17 +63,17 @@ public class TankControllerEditor : Editor {
 
         if (GUILayout.Button( tank.Tank_Red, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank(1);
+            tank.CreateTank("Red");
         }
 
         if (GUILayout.Button(tank.Tank_Blue, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank(1);
+            tank.CreateTank("Blue");
         }
 
         if (GUILayout.Button(tank.Tank_Black, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank(1);
+            tank.CreateTank("Black");
         }
 
 

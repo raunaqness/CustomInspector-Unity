@@ -5,6 +5,10 @@ using UnityEngine;
 public class TankController : MonoBehaviour
 {
 
+    public GameObject TankBlack;
+    public GameObject TankRed;
+    public GameObject TankBlue;
+
     // Movement Stuff
     [Header("Tank Movement")]
     public int playerNumber = 1;
@@ -79,13 +83,6 @@ public class TankController : MonoBehaviour
     [HideInInspector]
     public Texture Tank_Blue;
 
-    // GUIButton Functions
-
-    public void CreateTank(int TankNumber)
-    {
-        Debug.Log("Tank 1 Created!");    
-    }
-
     // Context Menu Functions
 
     [ContextMenu("Difficulty - Normal")]
@@ -104,6 +101,33 @@ public class TankController : MonoBehaviour
         velocity = 12f;
         damageRadius = 25f;
         tankClass = "Overwatch";
+    }
+
+    // GUIButton Functions
+
+    public void CreateTank(string TankColor)
+    {
+        GameObject NewTank;
+
+        switch(TankColor){
+            case "Red" :
+                NewTank = Instantiate(TankRed);
+                break;
+
+            case "Blue":
+                NewTank = Instantiate(TankBlue);
+                break;
+
+            case "Black":
+                NewTank = Instantiate(TankBlack);
+                break;
+
+            default:
+                break;
+
+
+        }
+
     }
 
     private void Awake()
@@ -130,7 +154,6 @@ public class TankController : MonoBehaviour
 
     private void Update()
     {
-        // Store the value of both input axes.
         movementInputValue = Input.GetAxis(movementAxisName);
         turnInputValue = Input.GetAxis(turnAxisName);
 
@@ -139,29 +162,20 @@ public class TankController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Adjust the rigidbodies position and orientation in FixedUpdate.
         Move();
         Turn();
     }
 
     private void Move()
     {
-        // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
         Vector3 movement = transform.up * movementInputValue * speed * Time.deltaTime * -1;
-
-        // Apply this movement to the rigidbody's position.
         rb.MovePosition(rb.position + movement);
     }
 
     private void Turn()
     {
-        // Determine the number of degrees to be turned based on the input, speed and time between frames.
         float turn = turnInputValue * turnSpeed * Time.deltaTime;
-
-        // Make this into a rotation in the y axis.
         Quaternion turnRotation = Quaternion.Euler(0f, 0f, turn);
-
-        // Apply this rotation to the rigidbody's rotation.
         rb.MoveRotation(rb.rotation * turnRotation);
     }
 
