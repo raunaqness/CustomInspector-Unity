@@ -61,17 +61,17 @@ public class TankControllerEditor : Editor {
         GUILayout.Label("Spawn Tank");
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button( tank.Tank_Red, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button( tank.ThumbnailTankRed, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
             tank.CreateTank("Red");
         }
 
-        if (GUILayout.Button(tank.Tank_Blue, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button(tank.ThumbnailTankBlue, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
             tank.CreateTank("Blue");
         }
 
-        if (GUILayout.Button(tank.Tank_Black, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button(tank.ThumbnailTankBlack, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
             tank.CreateTank("Black");
         }

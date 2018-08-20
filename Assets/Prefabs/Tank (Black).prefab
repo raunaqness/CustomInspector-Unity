@@ -520,7 +520,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5f6101a44a6479bab3247b22e5c921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankPrefab: {fileID: 1006871222629586, guid: f6b2e283d21124cc3acfd853a47b1139, type: 2}
+  TankBlack: {fileID: 1813702435607686}
+  TankRed: {fileID: 1189521760129330, guid: 18dd46e321c5945bdbf39c5ac1eaec96, type: 2}
+  TankBlue: {fileID: 1573784900115588, guid: 9c2602b3990b24dbf93a6627d88186c6, type: 2}
   playerNumber: 1
   speed: 20
   turnSpeed: 120
@@ -540,9 +542,9 @@ MonoBehaviour:
   EngineDriving: {fileID: 8300000, guid: ebe8df16cc54e476a93294163858633c, type: 3}
   ShootingAudioclip: {fileID: 8300000, guid: a2f7eb9bd77ff4c55b3461ed74f493e7, type: 3}
   FireAudioclip: {fileID: 8300000, guid: ade0813146e7e46a896e3ebe1cbb308e, type: 3}
-  Tank_Red: {fileID: 2800000, guid: 4ae5000db14064ba484aae3d1ef76d3d, type: 3}
-  Tank_Black: {fileID: 2800000, guid: c1b64339250dd4d8da133565b1b057f5, type: 3}
-  Tank_Blue: {fileID: 2800000, guid: 07bd2fa9ffa794c63931a3cb69e50394, type: 3}
+  ThumbnailTankRed: {fileID: 2800000, guid: 4ae5000db14064ba484aae3d1ef76d3d, type: 3}
+  ThumbnailTankBlack: {fileID: 2800000, guid: c1b64339250dd4d8da133565b1b057f5, type: 3}
+  ThumbnailTankBlue: {fileID: 2800000, guid: 07bd2fa9ffa794c63931a3cb69e50394, type: 3}
 --- !u!198 &198128465609714212
 ParticleSystem:
   m_ObjectHideFlags: 1

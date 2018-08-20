@@ -76,12 +76,12 @@ public class TankController : MonoBehaviour
     [Header("Custom Editor Elements")]
 
 
-    [HideInInspector]
-    public Texture Tank_Red;
-    [HideInInspector]
-    public Texture Tank_Black;
-    [HideInInspector]
-    public Texture Tank_Blue;
+    //[HideInInspector]
+    public Texture ThumbnailTankRed;
+    //[HideInInspector]
+    public Texture ThumbnailTankBlack;
+    //[HideInInspector]
+    public Texture ThumbnailTankBlue;
 
     // Context Menu Functions
 
@@ -125,6 +125,8 @@ public class TankController : MonoBehaviour
             default:
                 break;
 
+        // Set Thumbnail Images
+                //NewTank.GetComponent<TankController>().Tank_
 
         }
 

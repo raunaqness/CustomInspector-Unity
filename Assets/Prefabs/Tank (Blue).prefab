@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 95464641085375838}
   - component: {fileID: 82459534149010480}
   - component: {fileID: 114854101624422776}
+  - component: {fileID: 54056506000796474}
   m_Layer: 0
   m_Name: Tank (Blue)
   m_TagString: Untagged
@@ -307,6 +308,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787015247614854}
   m_Mesh: {fileID: 4300004, guid: ea3d65c01cbe7439a86a61ff20ba2259, type: 3}
+--- !u!54 &54056506000796474
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1573784900115588}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &82459534149010480
 AudioSource:
   m_ObjectHideFlags: 1
@@ -431,7 +447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5f6101a44a6479bab3247b22e5c921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankPrefab: {fileID: 0}
+  TankBlack: {fileID: 1813702435607686, guid: 9f6be4cfe34d24ce68399db7876ea0ae, type: 2}
+  TankRed: {fileID: 1189521760129330, guid: 18dd46e321c5945bdbf39c5ac1eaec96, type: 2}
+  TankBlue: {fileID: 1573784900115588}
   playerNumber: 1
   speed: 20
   turnSpeed: 120
@@ -451,6 +469,6 @@ MonoBehaviour:
   EngineDriving: {fileID: 8300000, guid: ebe8df16cc54e476a93294163858633c, type: 3}
   ShootingAudioclip: {fileID: 8300000, guid: a2f7eb9bd77ff4c55b3461ed74f493e7, type: 3}
   FireAudioclip: {fileID: 8300000, guid: ade0813146e7e46a896e3ebe1cbb308e, type: 3}
-  Tank_Red: {fileID: 0}
-  Tank_Black: {fileID: 0}
-  Tank_Blue: {fileID: 0}
+  ThumbnailTankRed: {fileID: 2800000, guid: 4ae5000db14064ba484aae3d1ef76d3d, type: 3}
+  ThumbnailTankBlack: {fileID: 2800000, guid: c1b64339250dd4d8da133565b1b057f5, type: 3}
+  ThumbnailTankBlue: {fileID: 2800000, guid: 07bd2fa9ffa794c63931a3cb69e50394, type: 3}
