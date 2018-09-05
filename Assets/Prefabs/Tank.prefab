@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 65274872567958524}
   - component: {fileID: 114603688267216798}
   m_Layer: 0
-  m_Name: Tank (Black)
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

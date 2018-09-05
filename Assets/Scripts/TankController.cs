@@ -13,8 +13,8 @@ public class TankController : MonoBehaviour
     [Header("Tank Movement")]
     public int playerNumber = 1;
 
-    [Range(10f, 50f)]
-    public int speed = 20;
+    [Range(5f, 50f)]
+    public int speed = 15;
 
     [Range(90f, 150f)]
     public int turnSpeed = 120;
