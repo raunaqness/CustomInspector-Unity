@@ -5,9 +5,6 @@ using UnityEngine;
 public class TankController : MonoBehaviour
 {
 
-    public GameObject Tank;
-
-    [Space(5)]
     [Header("Props")]
     public GameObject Crate;
     public GameObject TrafficCone;
@@ -42,7 +39,6 @@ public class TankController : MonoBehaviour
     [Space(10)]
     [Header("Tank Shooting")]
     public Rigidbody Shell1;
-    public Rigidbody Shell2;
 
     public float MinLaunchForce = 5f;
     public float MaxLaunchForce = 25f;
@@ -182,7 +178,7 @@ public class TankController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 movement = transform.up * movementInputValue * speed * Time.deltaTime * -1;
+        Vector3 movement = transform.up * movementInputValue * speed * Time.deltaTime * -1f;
         rb.MovePosition(rb.position + movement);
     }
 

@@ -10,8 +10,8 @@ public class TankControllerEditor : Editor {
 
         TankController tank = (TankController)target;
 
-        float ThumbnailWidth = 100f;
-        float ThumbnailHeight = 75;
+        float ThumbnailWidth = 70;
+        float ThumbnailHeight = 70;
 
         float LabelWidth = 150f;
 
@@ -76,9 +76,9 @@ public class TankControllerEditor : Editor {
             tank.SpawnProp("crate");
         }
 
-        GUILayout.EndHorizontal();
+        //GUILayout.EndHorizontal();
 
-        GUILayout.BeginHorizontal();
+        //GUILayout.BeginHorizontal();
 
         if (GUILayout.Button(tank.Thumbnail_TrafficCone, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
