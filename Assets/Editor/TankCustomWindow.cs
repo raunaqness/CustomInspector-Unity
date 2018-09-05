@@ -32,7 +32,7 @@ public class TankCustomWindow : EditorWindow {
 
             if (renderer != null)
             {
-                renderer.sharedMaterial.color = color;
+                renderer.material.color = color;
             }
         }
     }
