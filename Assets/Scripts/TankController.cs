@@ -67,18 +67,16 @@ public class TankController : MonoBehaviour
     [Space(10)]
     [Header("Audio")]
 
-    public AudioSource MovementAudio;
+    public AudioSource MovementAudioSource;
+    public AudioSource BackgroundAudioSource;
 
-    public AudioClip EngineIdle;
-    public AudioClip EngineDriving;
+    public AudioClip BackgroundMusicAudioClip;
     public AudioClip ShootingAudioclip;
-    public AudioClip FireAudioclip;
 
     // Audio Stuff
 
     [Space(10)]
     [Header("Custom Editor Elements")]
-
 
     //[HideInInspector]
     public Texture Thumbnail_Crate;
