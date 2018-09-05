@@ -2071,6 +2071,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eddd91cc27f4b4202a5e8f796cf3280c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &877696456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877696457}
+  m_Layer: 0
+  m_Name: PropSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &877696457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877696456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.68, y: 2.16, z: -16.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1150658662}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &889706904
 Prefab:
   m_ObjectHideFlags: 0
@@ -2898,6 +2926,7 @@ Transform:
   m_Children:
   - {fileID: 1460187584}
   - {fileID: 1256506510}
+  - {fileID: 877696457}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4385,6 +4414,41 @@ Prefab:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: Crate
+      value: 
+      objectReference: {fileID: 1264549500682302, guid: ad22148218bae48f8874ba162317c544,
+        type: 2}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: TrafficCone
+      value: 
+      objectReference: {fileID: 1983463332152534, guid: eddd91cc27f4b4202a5e8f796cf3280c,
+        type: 2}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: Board
+      value: 
+      objectReference: {fileID: 1974344245875536, guid: c609da28580a04d02a1687a08c4ef8fe,
+        type: 2}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 1620346635720660, guid: 17ba4325de7c043c1b23c3e2ad5e12f8,
+        type: 2}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: OilDrum
+      value: 
+      objectReference: {fileID: 1458751353804154, guid: 7e4493a765e3f461f8934333e68f9462,
+        type: 2}
+    - target: {fileID: 114603688267216798, guid: 9f6be4cfe34d24ce68399db7876ea0ae,
+        type: 2}
+      propertyPath: propSpawnPosition
+      value: 
+      objectReference: {fileID: 877696457}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f6be4cfe34d24ce68399db7876ea0ae, type: 2}
   m_IsPrefabAsset: 0

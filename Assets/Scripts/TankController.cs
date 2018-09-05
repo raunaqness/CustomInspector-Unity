@@ -5,9 +5,17 @@ using UnityEngine;
 public class TankController : MonoBehaviour
 {
 
-    public GameObject TankBlack;
-    public GameObject TankRed;
-    public GameObject TankBlue;
+    public GameObject Tank;
+
+    [Space(5)]
+    [Header("Props")]
+    public GameObject Crate;
+    public GameObject TrafficCone;
+    public GameObject Board;
+    public GameObject Wheel;
+    public GameObject OilDrum;
+
+    public Transform propSpawnPosition;
 
     // Movement Stuff
     [Header("Tank Movement")]
@@ -77,11 +85,15 @@ public class TankController : MonoBehaviour
 
 
     //[HideInInspector]
-    public Texture ThumbnailTankRed;
+    public Texture Thumbnail_Crate;
     //[HideInInspector]
-    public Texture ThumbnailTankBlack;
+    public Texture Thumbnail_OilDrum;
     //[HideInInspector]
-    public Texture ThumbnailTankBlue;
+    public Texture Thumbnail_Board;
+    //[HideInInspector]
+    public Texture Thumbnail_TrafficCone;
+    //[HideInInspector]
+    public Texture Thumbnail_Wheel;
 
     // Context Menu Functions
 
@@ -105,31 +117,31 @@ public class TankController : MonoBehaviour
 
     // GUIButton Functions
 
-    public void CreateTank(string TankColor)
+    public void SpawnProp(string propname)
     {
-        GameObject NewTank;
-
-        switch(TankColor){
-            case "Red" :
-                NewTank = Instantiate(TankRed);
+        switch (propname)
+        {
+            case "board":
+                Instantiate(Board, propSpawnPosition);
                 break;
 
-            case "Blue":
-                NewTank = Instantiate(TankBlue);
+            case "oil_drum":
+                Instantiate(OilDrum, propSpawnPosition);
                 break;
 
-            case "Black":
-                NewTank = Instantiate(TankBlack);
+            case "crate":
+                Instantiate(Crate, propSpawnPosition);
                 break;
 
-            default:
+            case "traffic_cone":
+                Instantiate(TrafficCone, propSpawnPosition);
                 break;
 
-        // Set Thumbnail Images
-                //NewTank.GetComponent<TankController>().Tank_
-
+            case "wheel":
+                Instantiate(Wheel, propSpawnPosition);
+                break;
         }
-
+            
     }
 
     private void Awake()

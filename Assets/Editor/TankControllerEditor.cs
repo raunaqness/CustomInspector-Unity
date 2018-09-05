@@ -58,25 +58,37 @@ public class TankControllerEditor : Editor {
         // Thumbnails - Images with Buttons
 
         GUILayout.Space(20f);
-        GUILayout.Label("Spawn Tank");
+        GUILayout.Label("Spawn Prop");
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button( tank.ThumbnailTankRed, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button( tank.Thumbnail_Board, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank("Red");
+            tank.SpawnProp("board");
         }
 
-        if (GUILayout.Button(tank.ThumbnailTankBlue, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button(tank.Thumbnail_OilDrum, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank("Blue");
+            tank.SpawnProp("oil_drum");
         }
 
-        if (GUILayout.Button(tank.ThumbnailTankBlack, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        if (GUILayout.Button(tank.Thumbnail_Crate, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
         {
-            tank.CreateTank("Black");
+            tank.SpawnProp("crate");
         }
 
+        GUILayout.EndHorizontal();
 
+        GUILayout.BeginHorizontal();
+
+        if (GUILayout.Button(tank.Thumbnail_TrafficCone, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        {
+            tank.SpawnProp("traffic_cone");
+        }
+
+        if (GUILayout.Button(tank.Thumbnail_Wheel, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight)))
+        {
+            tank.SpawnProp("wheel");
+        }
 
         GUILayout.EndHorizontal();
 
