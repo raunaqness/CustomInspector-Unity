@@ -71,10 +71,7 @@ public class TankController : MonoBehaviour
     [Space(10)]
     [Header("Audio")]
 
-    public AudioSource MovementAudioSource;
-    public AudioSource BackgroundAudioSource;
-
-    public AudioClip BackgroundMusicAudioClip;
+    public AudioSource TankAudioSource;
     public AudioClip ShootingAudioclip;
 
     // Audio Stuff
@@ -187,6 +184,8 @@ public class TankController : MonoBehaviour
             Transform clone;
             clone = Instantiate(Shell1.transform, shootingPosition.position, shootingPosition.rotation);
             clone.GetComponent<Rigidbody>().AddForce(clone.transform.up * shootForce * -1f);
+            TankAudioSource.clip = ShootingAudioclip;
+            TankAudioSource.Play();
 
         }    
     }
