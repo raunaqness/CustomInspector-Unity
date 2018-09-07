@@ -45,11 +45,13 @@ public class TankControllerEditor : Editor {
 
             if(GUILayout.Button("Save"))
             {
+                
                 Debug.Log("PlayerPrefs Save");
             }
 
             if (GUILayout.Button("Reset"))
             {
+                PlayerPrefs.DeleteAll();
                 Debug.Log("PlayerPrefs DeleteAll");
             }
 

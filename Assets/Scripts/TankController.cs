@@ -38,7 +38,11 @@ public class TankController : MonoBehaviour
     // Shooting Stuff
     [Space(10)]
     [Header("Tank Shooting")]
-    public Rigidbody Shell1;
+    public GameObject Shell1;
+    public Transform shootingPosition;
+
+    [Range(1000f, 2000f)]
+    public float shootForce = 1000;
 
     public float MinLaunchForce = 5f;
     public float MaxLaunchForce = 25f;
@@ -165,6 +169,8 @@ public class TankController : MonoBehaviour
         movementInputValue = Input.GetAxis(movementAxisName);
         turnInputValue = Input.GetAxis(turnAxisName);
 
+        TankShot();
+
         //EngineAudio();
     }
 
@@ -172,6 +178,17 @@ public class TankController : MonoBehaviour
     {
         Move();
         Turn();
+    }
+
+    void TankShot()
+    {
+        if (Input.GetButtonUp("Jump"))
+        {
+            Transform clone;
+            clone = Instantiate(Shell1.transform, shootingPosition.position, shootingPosition.rotation);
+            clone.GetComponent<Rigidbody>().AddForce(clone.transform.up * shootForce * -1f);
+
+        }    
     }
 
     private void Move()
