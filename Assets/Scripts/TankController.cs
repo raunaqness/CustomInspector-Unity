@@ -111,34 +111,42 @@ public class TankController : MonoBehaviour
     // GUIButton Functions
 
     public void SpawnProp(string propname)
+
     {
+        GameObject temp;
         switch (propname)
         {
             case "board":
                 Debug.Log("board Instantiated");
-                Instantiate(Board);
+                temp = Instantiate(Board);
+                temp.GetComponent<Renderer>().material.color = Color.black;
                 break;
 
             case "oil_drum":
                 Debug.Log("oil_drum Instantiated");
-                Instantiate(OilDrum);
+                 temp = Instantiate(OilDrum);
+                temp.GetComponent<Renderer>().material.color = Color.black;
                 break;
 
             case "crate":
                 Debug.Log("crate Instantiated");
-                Instantiate(Crate);
+                 temp = Instantiate(Crate);
+                temp.GetComponent<Renderer>().material.color = Color.black;
                 break;
 
             case "traffic_cone":
                 Debug.Log("traffic_cone Instantiated");
-                Instantiate(TrafficCone);
+                 temp = Instantiate(TrafficCone);
+                temp.GetComponent<Renderer>().material.color = Color.black;
                 break;
 
             case "wheel":
-                Instantiate(Wheel);
+                temp = Instantiate(Wheel);
+                temp.GetComponent<Renderer>().material.color = Color.black;
                 Debug.Log("wheel Instantiated");
                 break;
         }
+
             
     }
 
