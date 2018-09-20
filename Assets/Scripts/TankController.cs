@@ -12,8 +12,6 @@ public class TankController : MonoBehaviour
     public GameObject Wheel;
     public GameObject OilDrum;
 
-    public Transform propSpawnPosition;
-
     // Movement Stuff
     [Header("Tank Movement")]
     public int playerNumber = 1;
@@ -117,23 +115,28 @@ public class TankController : MonoBehaviour
         switch (propname)
         {
             case "board":
-                Instantiate(Board, propSpawnPosition);
+                Debug.Log("board Instantiated");
+                Instantiate(Board);
                 break;
 
             case "oil_drum":
-                Instantiate(OilDrum, propSpawnPosition);
+                Debug.Log("oil_drum Instantiated");
+                Instantiate(OilDrum);
                 break;
 
             case "crate":
-                Instantiate(Crate, propSpawnPosition);
+                Debug.Log("crate Instantiated");
+                Instantiate(Crate);
                 break;
 
             case "traffic_cone":
-                Instantiate(TrafficCone, propSpawnPosition);
+                Debug.Log("traffic_cone Instantiated");
+                Instantiate(TrafficCone);
                 break;
 
             case "wheel":
-                Instantiate(Wheel, propSpawnPosition);
+                Instantiate(Wheel);
+                Debug.Log("wheel Instantiated");
                 break;
         }
             
