@@ -336,7 +336,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 75780691}
-  m_LocalRotation: {x: 0.045574497, y: -0.9498267, z: 0.16560245, w: 0.2613965}
+  m_LocalRotation: {x: 0.045574505, y: -0.9498267, z: 0.16560246, w: 0.26139653}
   m_LocalPosition: {x: -3.6272788, y: 4.336001, z: 0.59210443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3158,7 +3158,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301869598}
-  m_LocalRotation: {x: 0.045574497, y: -0.9498267, z: 0.16560245, w: 0.2613965}
+  m_LocalRotation: {x: 0.045574505, y: -0.9498267, z: 0.16560246, w: 0.26139653}
   m_LocalPosition: {x: -3.6272788, y: 4.336001, z: 0.59210443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4383,8 +4383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: b241f91b9ccf8ff489abf204b30d3112, type: 2}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 0
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &1603753092
 MonoBehaviour:

@@ -52,10 +52,7 @@ public class TankController : MonoBehaviour
 
     [Range(20f, 100)]
     [Tooltip("Health value between 0 and 100.")]
-    public int health = 100;
-
-    [Range(5f, 20f)]
-    public float damageRadius = 15f;
+    public int maximumHealth = 100;
 
     public string tankClass = "The best";
 
@@ -72,8 +69,6 @@ public class TankController : MonoBehaviour
     public AudioSource TankAudioSource;
     public AudioClip ShootingAudioclip;
 
-    // Audio Stuff
-
     [Space(10)]
     [Header("Custom Editor Elements")]
 
@@ -89,29 +84,24 @@ public class TankController : MonoBehaviour
     public Texture Thumbnail_Wheel;
 
     // Context Menu Functions
-
     [ContextMenu("Difficulty - Normal")]
     void SetDifficultyNormal()
     {
-        health = 100;
+        maximumHealth = 100;
         velocity = 20f;
-        damageRadius = 15f;
         tankClass = "Bruiser";
     }
 
     [ContextMenu("Difficulty - Dark Souls")]
     void SetDifficultyDarkSouls()
     {
-        health = 100;
+        maximumHealth = 100;
         velocity = 12f;
-        damageRadius = 25f;
         tankClass = "Overwatch";
     }
 
     // GUIButton Functions
-
     public void SpawnProp(string propname)
-
     {
         GameObject temp;
         switch (propname)
@@ -146,8 +136,6 @@ public class TankController : MonoBehaviour
                 Debug.Log("wheel Instantiated");
                 break;
         }
-
-            
     }
 
     private void Awake()
@@ -167,9 +155,6 @@ public class TankController : MonoBehaviour
     {
         movementAxisName = "Vertical";// + playerNumber;
         turnAxisName = "Horizontal";// + playerNumber;
-
-        // Store the original pitch of the audio source.
-        //m_OriginalPitch = m_MovementAudio.pitch;
     }
 
     private void Update()
@@ -178,8 +163,6 @@ public class TankController : MonoBehaviour
         turnInputValue = Input.GetAxis(turnAxisName);
 
         TankShot();
-
-        //EngineAudio();
     }
 
     private void FixedUpdate()
@@ -197,7 +180,6 @@ public class TankController : MonoBehaviour
             clone.GetComponent<Rigidbody>().AddForce(clone.transform.up * shootForce * -1f);
             TankAudioSource.clip = ShootingAudioclip;
             TankAudioSource.Play();
-
         }    
     }
 
@@ -213,9 +195,4 @@ public class TankController : MonoBehaviour
         Quaternion turnRotation = Quaternion.Euler(0f, 0f, turn);
         rb.MoveRotation(rb.rotation * turnRotation);
     }
-
-
-
-
-
 }
